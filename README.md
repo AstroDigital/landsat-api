@@ -1,5 +1,7 @@
 ## Landsat8 Metadata API
 
+[![Join the chat at https://gitter.im/AstroDigital/landsat-api](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/AstroDigital/landsat-api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This small nodejs application creates an API for landsat metadata.
 
 #### Dependencies: Elastic Search
