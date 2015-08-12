@@ -4,7 +4,7 @@ This small nodejs application creates an API for landsat metadata.
 
 #### Dependencies: Elastic Search
 
-Donwload and install the lastest version of elastic search zip from [ES website](http://www.elasticsearch.org/download/)
+Download and install the lastest version of elastic search zip from [ES website](http://www.elasticsearch.org/download/)
 
 #### Installation
 
