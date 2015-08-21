@@ -1,11 +1,18 @@
 language: node_js
-
 node_js:
 - '0.12'
-
 services:
 - mongodb
 - elasticsearch
-
 before_script:
-  - sleep 15
+- sleep 15
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: LNdUgZ4fjY/ME76bcs0IjyBJKRzvisKvz+fsK3HsjKUGOfFPbEf8f4xDnnPq5KJ4wVm7OpD/BNbpM5AX5Vgt15Ft1+L9MR8XLe5oZ8OxCBWZO21FyQ2tn2OAsOhS88IoHVtIf7f5t/sgJh5/YbDqhaWNcLUdrR+e3abxggGDH9s=
+  app:
+    master: ad-landsat-api
+    develop: ad-landsat-api-staging
+  on:
+    repo: AstroDigital/landsat-api
