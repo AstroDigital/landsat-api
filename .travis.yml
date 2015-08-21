@@ -10,7 +10,7 @@ before_script:
 deploy:
   provider: heroku
   api_key:
-    secure: "RFU+GmNuP5ZfBjuZOfZGQ12UOuVLd5V7jFJCRIVDSK8cfjNpvMXxr0C2x7Vada41Dq0qvtfZcgXRf7CKHCWRWjaQvb9XVMX6bmLAvyS90HEiJTXrvCFu/q4L70EUdzKn+TwqZ4MjoZ6Wwv46h4Bjz0KWc2LABjMuhEhMyuN8zW8="
+    secure: "BaeaKT5jlZoEwz2pTDVbuDHyT/FaXdLQp/IJHld3pMloxeq2X4dO++eFN/LqBhCH0CoihJb7n5VcIQb8gvqlL0GKI9C+fMGw5M4giHNn2FpBsKX3hBiQtlP39fQHtkNbjbt++BoAJcsBW7lzEO0HJ0FdNUTkASA6eR145FvtcfE="
   app:
     master: ad-landsat-api
     develop: ad-landsat-api-staging
