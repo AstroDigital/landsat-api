@@ -6,7 +6,6 @@ services:
 - elasticsearch
 before_script:
 - sleep 15
-
 deploy:
   provider: heroku
   api_key:
