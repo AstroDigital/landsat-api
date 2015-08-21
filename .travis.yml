@@ -6,10 +6,11 @@ services:
 - elasticsearch
 before_script:
 - sleep 15
+
 deploy:
   provider: heroku
   api_key:
-    secure: LNdUgZ4fjY/ME76bcs0IjyBJKRzvisKvz+fsK3HsjKUGOfFPbEf8f4xDnnPq5KJ4wVm7OpD/BNbpM5AX5Vgt15Ft1+L9MR8XLe5oZ8OxCBWZO21FyQ2tn2OAsOhS88IoHVtIf7f5t/sgJh5/YbDqhaWNcLUdrR+e3abxggGDH9s=
+    secure: "RFU+GmNuP5ZfBjuZOfZGQ12UOuVLd5V7jFJCRIVDSK8cfjNpvMXxr0C2x7Vada41Dq0qvtfZcgXRf7CKHCWRWjaQvb9XVMX6bmLAvyS90HEiJTXrvCFu/q4L70EUdzKn+TwqZ4MjoZ6Wwv46h4Bjz0KWc2LABjMuhEhMyuN8zW8="
   app:
     master: ad-landsat-api
     develop: ad-landsat-api-staging
