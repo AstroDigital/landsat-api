@@ -35,6 +35,7 @@ Set environment variables on your system or add an `.env` file to the root direc
   - `REDIS_PASSWORD=redispassword` Redis db password. Default is null.
   - `REDIS_DATABASE=myredisdb` Name of the redis db. Default is null.
   - `REDIS_PORT=6379` Redis port. Default is 6379.
+  - `LANDSAT_PAYLOAD_LIMIT` Limit of payload size for POST in bytes. Default is 2048000.
 
 #### Run
 
