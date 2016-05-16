@@ -1,6 +1,7 @@
 'use strict';
 
 var Hapi = require('hapi');
+var redis = require('redis-url');
 var boolifyString = require('boolify-string');
 var landsat = require('../controllers/es/landsat.js');
 var count = require('../controllers/es/count.js');
@@ -36,14 +37,29 @@ Server.prototype.start = function (cb) {
 
   // Whether to use REDIS as cache
   if (boolifyString(process.env.REDIS_USE)) {
-    hapiOptions.cache = [
-      {
-        engine: require('catbox-redis'),
-        partition: 'cache',
+
+    var redisConfig;
+    if (process.env.REDIS_URL) {
+      redisConfig = redis.parse(process.env.REDIS_URL);
+      redisConfig.database = (redisConfig.auth || '').split(':')[0];
+      redisConfig.host = redisConfig.hostname;
+    } else  {
+      redisConfig = {
         host: process.env.REDIS_HOST || '127.0.0.1',
         password: process.env.REDIS_PASSWORD || '',
         database: process.env.REDIS_DATABASE || '',
         port: process.env.REDIS_PORT || '6379'
+      };
+    }
+
+    hapiOptions.cache = [
+      {
+        engine: require('catbox-redis'),
+        partition: 'cache',
+        host: redisConfig.hostname,
+        password: redisConfig.password,
+        database: redisConfig.database,
+        port: redisConfig.port
       }
     ];
   }
